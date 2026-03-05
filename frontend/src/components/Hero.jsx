@@ -4,22 +4,20 @@ import { Link } from 'react-router-dom';
 const Hero = ({ onBookClick }) => {
     return (
         <section className="relative min-h-[85vh] flex items-center overflow-hidden animate-fade-in">
-            {/* Background Gradient */}
-            <div className="absolute inset-0 z-0">
-                <div
-                    className="w-full h-full"
-                    style={{
-                        background: 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 30%, #1a365d 50%, #0c2340 70%, #0f172a 100%)',
-                    }}
-                />
-                {/* Subtle pattern overlay */}
-                <div className="absolute inset-0 opacity-10"
-                    style={{
-                        backgroundImage: 'radial-gradient(circle at 25% 25%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(59,130,246,0.2) 0%, transparent 50%)',
-                    }}
-                />
+            {/* Background Video */}
+            <div className="absolute inset-0 z-0 bg-[#0f172a]">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                >
+                    <source src="/hero-background.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
                 {/* Dark overlay for readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/70 via-[#1e3a5f]/40 to-[#0f172a]/70" />
             </div>
 
             {/* Content */}
