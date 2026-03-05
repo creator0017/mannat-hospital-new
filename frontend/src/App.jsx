@@ -10,6 +10,8 @@ import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import PatientStoriesPage from './pages/PatientStoriesPage';
 import AppointmentForm from './components/AppointmentForm';
+import WhatsAppButton from './components/WhatsAppButton';
+
 
 // Scroll to top on every route change
 function ScrollToTop() {
@@ -40,6 +42,8 @@ function App() {
           <Route path="/patient-stories" element={<PatientStoriesPage onBookClick={toggleForm} />} />
         </Routes>
         <AppointmentForm isOpen={isFormOpen} onClose={toggleForm} />
+        <WhatsAppButton />
+
       </div>
     </Router>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import CountUp from '../components/CountUp';
 
 const AboutPage = ({ onBookClick }) => {
     return (
@@ -23,7 +24,7 @@ const AboutPage = ({ onBookClick }) => {
                             <div className="relative">
                                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                                     <img
-                                        src="https://www.mannathospital.com/wp-content/uploads/2017/12/IMG-20171215-WA0035.jpg"
+                                        src="/about-hospital.jpg"
                                         alt="Mannat Hospital Building"
                                         className="w-full h-auto object-cover"
                                     />
@@ -104,7 +105,9 @@ const AboutPage = ({ onBookClick }) => {
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                             <div>
-                                <div className="text-4xl lg:text-5xl font-black text-accent mb-2">30+</div>
+                                <div className="text-4xl lg:text-5xl font-black text-accent mb-2">
+                                    <CountUp end={30} suffix="+" duration={2000} />
+                                </div>
                                 <div className="text-white/70 text-sm font-medium">Years of Service</div>
                             </div>
                             <div>
@@ -112,11 +115,15 @@ const AboutPage = ({ onBookClick }) => {
                                 <div className="text-white/70 text-sm font-medium">Emergency Care</div>
                             </div>
                             <div>
-                                <div className="text-4xl lg:text-5xl font-black text-accent mb-2">10K+</div>
+                                <div className="text-4xl lg:text-5xl font-black text-accent mb-2">
+                                    <CountUp end={10} suffix="K+" duration={2000} />
+                                </div>
                                 <div className="text-white/70 text-sm font-medium">Patients Treated</div>
                             </div>
                             <div>
-                                <div className="text-4xl lg:text-5xl font-black text-accent mb-2">15+</div>
+                                <div className="text-4xl lg:text-5xl font-black text-accent mb-2">
+                                    <CountUp end={15} suffix="+" duration={2000} />
+                                </div>
                                 <div className="text-white/70 text-sm font-medium">Expert Doctors</div>
                             </div>
                         </div>

@@ -121,7 +121,7 @@ const Contact = () => {
                             <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 h-64">
                                 <iframe
                                     title="Mannat Hospital Location"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1443.164638936042!2d76.88604013555134!3d31.522827714145013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390519b9a19a4139%3A0x94360292df79640e!2sManat%20Hospital!5e1!3m2!1sen!2sin!4v1772346356359!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.3400615456277!2d76.8852773!3d31.5223848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390519bb5ad585a9%3A0x8149d5f362c5779!2sMannat%20Hospital%20-%20Institute%20of%20Endoscopic%20%26%20Minimal%20Invasive%20Spine%20Surgery!5e1!3m2!1sen!2sin!4v1714400000000!5m2!1sen!2sin"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -131,7 +131,7 @@ const Contact = () => {
                                 ></iframe>
                             </div>
                             <a
-                                href="https://maps.app.goo.gl/rQ2yHQAFxZAXyCxx5"
+                                href="https://maps.app.goo.gl/dqNpGKnq8gxivvLn8"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 mt-4 text-primary font-bold text-sm hover:underline"

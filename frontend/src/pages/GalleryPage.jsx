@@ -52,12 +52,12 @@ const galleryImages = [
 
     // New Hospital Photos
     { src: '/gallery/photo-1.jpeg', alt: 'Mannat Hospital Building — Front View', category: 'Hospital' },
-    { src: '/gallery/photo-2.jpeg', alt: 'Hospital Entrance with Ambulance', category: 'Hospital' },
+    { src: '/about-hospital.png', alt: 'Mannat Hospital Building', category: 'Hospital' },
     { src: '/gallery/photo-3.jpeg', alt: 'ICU — Intensive Care Unit', category: 'Ward' },
     { src: '/gallery/photo-4.jpeg', alt: 'Reception Desk', category: 'Reception' },
     { src: '/gallery/photo-5.jpeg', alt: 'In-House Pharmacy', category: 'Pharmacy' },
     { src: '/gallery/photo-6.jpeg', alt: 'Mannat Hospital — Full Building View', category: 'Hospital' },
-    { src: '/gallery/photo-7.jpeg', alt: 'Mannat Hospital — Exterior View', category: 'Hospital' },
+
 
     // Services & Specialties Posters
     { src: '/gallery/hospital-1.jpeg', alt: 'Endoscopic & Minimal Invasive Spine Surgery', category: 'Services Info' },
@@ -153,22 +153,25 @@ const Lightbox = ({ image, images, onClose, onNavigate }) => {
 const GalleryPage = ({ onBookClick }) => {
     const [activeFilter, setActiveFilter] = useState('All');
     const [selectedImage, setSelectedImage] = useState(null);
+    const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
     const filteredImages = activeFilter === 'All'
         ? galleryImages
         : galleryImages.filter(img => img.category === activeFilter);
 
+    // Auto-advance slideshow
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentSlideIndex((prevIndex) => (prevIndex + 1) % galleryImages.length);
+        }, 3500); // Change image every 3.5 seconds
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <>
             <Header onBookClick={onBookClick} />
             <main>
-                {/* Hero */}
-                <section className="py-20 bg-primary text-white animate-fade-in">
-                    <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-                        <h1 className="text-5xl lg:text-6xl font-black mb-6">Gallery</h1>
-                        <p className="text-xl text-white/70 max-w-2xl mx-auto">A visual tour of Mannat Hospital — our infrastructure, equipment, and campus.</p>
-                    </div>
-                </section>
+
 
                 {/* Filter Buttons */}
                 <section className="py-8 bg-white dark:bg-background-dark border-b border-slate-100 dark:border-slate-800">

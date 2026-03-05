@@ -11,12 +11,12 @@ const specialists = [
         fellowship: 'Fellowship in Spine Surgery',
         experience: '21+ Years Experience',
         image: '/doctors/dr-basit.png',
-        summary: 'Renowned Orthopedic & Spine Surgeon with 21+ years of experience. Specialist in Endoscopic & Minimal Invasive Spine Surgery with over 1000 successful spine surgeries and 500+ joint replacements.',
+        summary: 'Renowned Orthopedic & Spine Surgeon with 21+ years of experience. Specialist in Endoscopic & Minimal Invasive Spine Surgery with over 10000 successful spine surgeries and 2500+ joint replacements.',
         bio: [
             'Dr. M.A Basit is a renowned Orthopedic & Spine Surgeon with over 21 years of experience.',
             'He specializes in Endoscopic & Minimal Invasive Spine Surgery — pioneering techniques for faster recovery and minimal scarring.',
-            'He has done more than 1000 successful spine surgeries — including Discectomy (cervical & lumbar), USS, and Scoliosis correction.',
-            'He has done more than 500 successful hip & knee replacements with world class implants & excellent results.',
+            'He has done more than 10000 successful spine surgeries — including Discectomy (cervical & lumbar), USS, and Scoliosis correction.',
+            'He has done more than 2500 successful hip & knee replacements with world class implants & excellent results.',
         ],
         expertise: [
             'Endoscopic & Minimal Invasive Spine Surgery',
@@ -26,8 +26,8 @@ const specialists = [
             'Deformity Correction & Limb Lengthening Surgeries',
         ],
         stats: [
-            { label: 'Spine Surgeries', value: '1000+' },
-            { label: 'Joint Replacements', value: '500+' },
+            { label: 'Spine Surgeries', value: '10000+' },
+            { label: 'Joint Replacements', value: '2500+' },
             { label: 'Years Experience', value: '21+' },
         ],
     },
@@ -162,74 +162,170 @@ const DoctorModal = ({ doctor, onClose, onBookClick }) => {
 /* ─── Main Page ─── */
 const SpecialistsPage = ({ onBookClick }) => {
     const [selectedDoctor, setSelectedDoctor] = useState(null);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
     return (
         <>
             <Header onBookClick={onBookClick} />
             <main>
-                {/* Hero */}
-                <section className="py-20 bg-primary text-white animate-fade-in">
-                    <div className="max-w-7xl mx-auto px-6 lg:px-10 text-center">
-                        <h1 className="text-5xl lg:text-6xl font-black mb-6">Our Specialists</h1>
-                        <p className="text-xl text-white/70 max-w-2xl mx-auto">Meet the expert team of doctors and surgeons dedicated to your health and well-being.</p>
-                    </div>
-                </section>
+                {/* Specialists Section — matches reference design */}
+                <section style={{
+                    background: 'linear-gradient(135deg, #ede9fe 0%, #e0e7ff 50%, #ede9fe 100%)',
+                    padding: '80px 0 100px',
+                    minHeight: '100vh',
+                }}>
+                    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
 
-                {/* Specialist Cards */}
-                <section className="py-24 bg-gradient-to-b from-slate-50 to-white dark:from-slate-950 dark:to-slate-900">
-                    <div className="max-w-6xl mx-auto px-6 lg:px-10">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                        {/* Header Row */}
+                        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '48px', flexWrap: 'wrap', gap: '16px' }}>
+                            <div>
+                                {/* Pill Badge */}
+                                <span style={{
+                                    display: 'inline-block',
+                                    background: 'rgba(109, 40, 217, 0.08)',
+                                    border: '1.5px solid rgba(109, 40, 217, 0.2)',
+                                    color: '#6d28d9',
+                                    fontSize: '11px',
+                                    fontWeight: '700',
+                                    letterSpacing: '2px',
+                                    textTransform: 'uppercase',
+                                    padding: '6px 18px',
+                                    borderRadius: '50px',
+                                    marginBottom: '16px',
+                                }}>Our Doctors</span>
+                                <h1 style={{
+                                    fontSize: 'clamp(28px, 4vw, 42px)',
+                                    fontWeight: '800',
+                                    color: '#1e1b4b',
+                                    margin: '0',
+                                    lineHeight: '1.2',
+                                }}>Meet Our Expert Doctors</h1>
+                            </div>
+
+                        </div>
+
+                        {/* Doctor Cards Grid */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                            gap: '24px',
+                            maxWidth: '600px',
+                        }}>
                             {specialists.map((doc, i) => (
                                 <div
                                     key={i}
-                                    className="group relative bg-white dark:bg-slate-900 rounded-3xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 cursor-pointer"
                                     onClick={() => setSelectedDoctor(doc)}
+                                    onMouseEnter={() => setHoveredIndex(i)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                    style={{
+                                        position: 'relative',
+                                        borderRadius: '20px',
+                                        overflow: 'hidden',
+                                        cursor: 'pointer',
+                                        aspectRatio: '3 / 3.5',
+                                        background: i % 2 === 0
+                                            ? 'linear-gradient(160deg, #c7d2fe 0%, #e0e7ff 40%, #ddd6fe 100%)'
+                                            : 'linear-gradient(160deg, #ddd6fe 0%, #ede9fe 40%, #c7d2fe 100%)',
+                                        boxShadow: hoveredIndex === i
+                                            ? '0 20px 40px rgba(79, 70, 229, 0.2), 0 0 0 2px rgba(79, 70, 229, 0.15)'
+                                            : '0 4px 20px rgba(0, 0, 0, 0.06)',
+                                        transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                                        transform: hoveredIndex === i ? 'translateY(-6px)' : 'translateY(0)',
+                                    }}
                                 >
-                                    {/* Image */}
-                                    <div className="relative h-72 overflow-hidden bg-gradient-to-b from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700">
-                                        <img
-                                            src={doc.image}
-                                            alt={doc.name}
-                                            className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-700"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                                        {/* Floating Badge */}
-                                        <div className="absolute top-4 right-4 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full px-4 py-1.5 flex items-center gap-1.5 shadow-lg">
-                                            <span className="material-symbols-outlined text-primary text-sm">schedule</span>
-                                            <span className="text-xs font-bold text-slate-700 dark:text-slate-200">{doc.experience}</span>
-                                        </div>
-                                        {/* Name overlay on image */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                                            <h3 className="text-2xl font-black text-white mb-0.5">{doc.name}</h3>
-                                            <p className="text-teal-300 font-semibold text-sm">{doc.degree}</p>
-                                        </div>
+                                    {/* Doctor Image */}
+                                    <img
+                                        src={doc.image}
+                                        alt={doc.name}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            objectPosition: 'top center',
+                                            transition: 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+                                            transform: hoveredIndex === i ? 'scale(1.05)' : 'scale(1)',
+                                        }}
+                                    />
+
+                                    {/* Plus Icon Badge */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '14px',
+                                        right: '14px',
+                                        width: '32px',
+                                        height: '32px',
+                                        borderRadius: '50%',
+                                        background: '#4f46e5',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        color: '#fff',
+                                        fontSize: '18px',
+                                        fontWeight: '700',
+                                        boxShadow: '0 4px 12px rgba(79, 70, 229, 0.4)',
+                                        transition: 'transform 0.3s ease',
+                                        transform: hoveredIndex === i ? 'scale(1.15) rotate(90deg)' : 'scale(1)',
+                                        zIndex: 3,
+                                    }}>+</div>
+
+                                    {/* Name Overlay — revealed on hover */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '0',
+                                        left: '0',
+                                        right: '0',
+                                        padding: '24px 16px 18px',
+                                        background: 'linear-gradient(to top, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0) 100%)',
+                                        backdropFilter: 'blur(6px)',
+                                        transform: hoveredIndex === i ? 'translateY(0)' : 'translateY(100%)',
+                                        transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                                        zIndex: 2,
+                                    }}>
+                                        <p style={{
+                                            fontSize: '16px',
+                                            fontWeight: '700',
+                                            color: '#1e1b4b',
+                                            margin: '0 0 2px',
+                                            lineHeight: '1.3',
+                                        }}>{doc.name}</p>
+                                        <p style={{
+                                            fontSize: '12px',
+                                            fontWeight: '500',
+                                            color: '#6d28d9',
+                                            margin: '0',
+                                            letterSpacing: '0.3px',
+                                        }}>{doc.role}</p>
                                     </div>
 
-                                    {/* Card Body */}
-                                    <div className="p-6">
-                                        <p className="text-accent font-bold text-sm uppercase tracking-wider mb-2">{doc.role}</p>
-                                        <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">{doc.summary}</p>
-                                        <p className="text-xs text-slate-400 dark:text-slate-500 mb-5 italic">{doc.fellowship}</p>
-
-                                        {/* Stats Mini Row */}
-                                        <div className="flex items-center gap-4 mb-5">
-                                            {doc.stats.map((stat, j) => (
-                                                <div key={j} className="flex-1 text-center bg-slate-50 dark:bg-slate-800/50 rounded-xl py-2.5">
-                                                    <p className="text-lg font-black text-primary">{stat.value}</p>
-                                                    <p className="text-[10px] text-slate-400 uppercase tracking-wider">{stat.label}</p>
-                                                </div>
-                                            ))}
-                                        </div>
-
-                                        {/* View Profile Button */}
-                                        <button className="w-full bg-primary/5 hover:bg-primary text-primary hover:text-white rounded-xl py-3 font-semibold transition-all duration-300 flex items-center justify-center gap-2 group/btn">
-                                            <span>View Full Profile</span>
-                                            <span className="material-symbols-outlined text-lg group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                                        </button>
+                                    {/* Always-visible subtle name at bottom for non-hovered state */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '0',
+                                        left: '0',
+                                        right: '0',
+                                        padding: '40px 16px 16px',
+                                        background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)',
+                                        opacity: hoveredIndex === i ? 0 : 1,
+                                        transition: 'opacity 0.3s ease',
+                                        zIndex: 1,
+                                    }}>
+                                        <p style={{
+                                            fontSize: '15px',
+                                            fontWeight: '700',
+                                            color: '#fff',
+                                            margin: '0 0 1px',
+                                        }}>{doc.name}</p>
+                                        <p style={{
+                                            fontSize: '11px',
+                                            fontWeight: '500',
+                                            color: 'rgba(255,255,255,0.8)',
+                                            margin: '0',
+                                        }}>{doc.degree}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </section>
             </main>

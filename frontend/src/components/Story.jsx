@@ -2,12 +2,11 @@ import React, { useState, useEffect, useCallback } from 'react';
 
 const galleryImages = [
     { src: '/gallery/photo-1.jpeg', alt: 'Mannat Hospital Building — Front View' },
-    { src: '/gallery/photo-2.jpeg', alt: 'Hospital Entrance with Ambulance' },
+    { src: '/about-hospital.png', alt: 'Mannat Hospital Building' },
     { src: '/gallery/photo-3.jpeg', alt: 'ICU — Intensive Care Unit' },
     { src: '/gallery/photo-4.jpeg', alt: 'Reception Desk' },
     { src: '/gallery/photo-5.jpeg', alt: 'In-House Pharmacy' },
     { src: '/gallery/photo-6.jpeg', alt: 'Mannat Hospital — Full Building View' },
-    { src: '/gallery/photo-7.jpeg', alt: 'Mannat Hospital — Exterior View' },
 ];
 
 const Story = () => {

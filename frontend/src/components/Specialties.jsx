@@ -3,7 +3,6 @@ import React from 'react';
 const specialties = [
     { icon: 'skeleton', title: 'Spine Surgery', description: 'Pioneering minimal invasive and endoscopic techniques for faster recovery and less pain.' },
     { icon: 'orthopedics', title: 'Orthopedics', description: 'Comprehensive care for bone, joint, and muscle health, from trauma to total replacements.' },
-    { icon: 'child_care', title: 'Pediatric Surgery', description: 'Specialized, compassionate surgical solutions designed specifically for our youngest patients.' },
     { icon: 'medical_services', title: 'General Surgery', description: 'Expert surgical interventions across a wide range of conditions using modern technology.' },
     { icon: 'stethoscope', title: 'Internal Medicine', description: 'Holistic health management focused on prevention, diagnosis, and non-surgical treatment.' },
     { icon: 'emergency', title: '24/7 Emergency', description: 'Round-the-clock critical care support with immediate response for any medical emergency.' }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer = () => {
     return (
@@ -7,15 +8,8 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-10">
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-20">
                     <div className="lg:col-span-1">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="flex items-center justify-center">
-                                <img
-                                    alt="Mannat Hospital Logo"
-                                    className="h-10 w-auto object-contain"
-                                    src="/logo.jpg"
-                                />
-                            </div>
-                            <h2 className="text-primary dark:text-white text-lg font-bold">Mannat Hospital</h2>
+                        <div className="mb-6">
+                            <Logo className="h-12" />
                         </div>
                         <p className="text-slate-500 text-sm leading-relaxed mb-6">
                             Leading the way in minimal invasive surgery and comprehensive clinical care. Your health is our legacy.
@@ -24,7 +18,7 @@ const Footer = () => {
                             <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://www.instagram.com/mannat_hospital_/" target="_blank" rel="noopener noreferrer" title="Instagram">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
                             </a>
-                            <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://maps.app.goo.gl/rQ2yHQAFxZAXyCxx5" target="_blank" rel="noopener noreferrer" title="Google Maps">
+                            <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://maps.app.goo.gl/dqNpGKnq8gxivvLn8" target="_blank" rel="noopener noreferrer" title="Google Maps">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                             </a>
                         </div>
@@ -57,7 +51,7 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
                             <li><Link className="hover:text-primary transition-colors" to="/about">About Us</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/services">Our Services</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" to="/specialists">Our Specialists</Link></li>
+                            <li><Link className="hover:text-primary transition-colors" to="/specialists">Our Doctors</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/gallery">Gallery</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/patient-stories">Patient Stories</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/contact">Contact Us</Link></li>
@@ -68,7 +62,7 @@ const Footer = () => {
                         <div className="rounded-xl overflow-hidden h-40 mb-4">
                             <iframe
                                 title="Mannat Hospital Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1443.164638936042!2d76.88604013555134!3d31.522827714145013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390519b9a19a4139%3A0x94360292df79640e!2sManat%20Hospital!5e1!3m2!1sen!2sin!4v1772346356359!5m2!1sen!2sin"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1565.3400615456277!2d76.8852773!3d31.5223848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390519bb5ad585a9%3A0x8149d5f362c5779!2sMannat%20Hospital%20-%20Institute%20of%20Endoscopic%20%26%20Minimal%20Invasive%20Spine%20Surgery!5e1!3m2!1sen!2sin!4v1714400000000!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
                                 style={{ border: 0 }}
