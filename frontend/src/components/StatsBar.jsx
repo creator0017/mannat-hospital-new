@@ -19,16 +19,6 @@ const StatsBar = () => {
                     <p className="text-blue-200 font-medium">Years of Care</p>
                 </div>
 
-                <div className="flex-[2_2_0%] flex flex-col items-center justify-center border-y md:border-y-0 md:border-x border-blue-800 py-6 md:py-0 px-4">
-                    <p className="text-blue-200 font-bold uppercase tracking-wider text-sm mb-4">Accreditations & Empanelments</p>
-                    <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
-                        <span className="bg-white text-blue-900 border border-blue-100 text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-md shadow-sm">Ayushman</span>
-                        <span className="bg-white text-blue-900 border border-blue-100 text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-md shadow-sm">HIMCARE</span>
-                        <span className="bg-white text-blue-900 border border-blue-100 text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-md shadow-sm">ECHS</span>
-                        <span className="bg-white text-blue-900 border border-blue-100 text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-md shadow-sm">NABH</span>
-                        <span className="bg-white text-blue-900 border border-blue-100 text-[10px] md:text-xs font-bold px-3 py-1.5 rounded-md shadow-sm">HP Govt</span>
-                    </div>
-                </div>
 
                 <div className="flex-1">
                     <div className="text-4xl md:text-5xl font-black mb-2 text-white">
