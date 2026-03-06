@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -50,9 +51,16 @@ const Specialties = () => {
                                 <div className="p-8 flex flex-col flex-grow">
                                     <h4 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors">{item.title}</h4>
                                     <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">{item.description}</p>
-                                    <button className="mt-auto w-full border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-white px-5 py-3 text-xs font-bold tracking-widest uppercase rounded-xl transition-all group-hover:bg-primary group-hover:text-white group-hover:border-primary">
-                                        Learn More
-                                    </button>
+
+                                    {index === 0 ? (
+                                        <Link to="/departments/spine-surgery-sundernagar" className="mt-auto w-full border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-white px-5 py-3 text-xs font-bold tracking-widest uppercase rounded-xl transition-all group-hover:bg-primary group-hover:text-white group-hover:border-primary text-center">
+                                            Learn More
+                                        </Link>
+                                    ) : (
+                                        <button className="mt-auto w-full border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-white px-5 py-3 text-xs font-bold tracking-widest uppercase rounded-xl transition-all group-hover:bg-primary group-hover:text-white group-hover:border-primary">
+                                            Learn More
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </SwiperSlide>

@@ -12,8 +12,7 @@ import AppointmentForm from './components/AppointmentForm';
 import WhatsAppButton from './components/WhatsAppButton';
 import PhoneCallButton from './components/PhoneCallButton';
 import PopupLeadForm from './components/PopupLeadForm';
-
-
+import SpineSurgerySeoPage from './pages/departments/SpineSurgerySeoPage';
 // Scroll to top on every route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -40,6 +39,7 @@ function App() {
           <Route path="/gallery" element={<GalleryPage onBookClick={toggleForm} />} />
           <Route path="/contact" element={<ContactPage onBookClick={toggleForm} />} />
           <Route path="/patient-stories" element={<PatientStoriesPage onBookClick={toggleForm} />} />
+          <Route path="/departments/spine-surgery-sundernagar" element={<SpineSurgerySeoPage onBookClick={toggleForm} />} />
         </Routes>
         <AppointmentForm isOpen={isFormOpen} onClose={toggleForm} />
         <WhatsAppButton />
