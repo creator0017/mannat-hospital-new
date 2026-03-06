@@ -13,8 +13,8 @@ const HomePage = ({ onBookClick }) => {
             <Header onBookClick={onBookClick} />
             <main>
                 <Hero onBookClick={onBookClick} />
-                <Specialties />
                 <StatsBar />
+                <Specialties />
                 <CTA onBookClick={onBookClick} />
                 <ReviewsSection />
             </main>
