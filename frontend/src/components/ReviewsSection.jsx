@@ -82,7 +82,7 @@ const trustBadges = [
     },
     {
         icon: 'diversity_1',
-        title: '500+ Happy Patients',
+        title: '50000+ Happy Patients',
         sub: 'Trusted by families across Mandi',
         borderColor: 'border-t-orange-600',
         iconColor: 'text-orange-600'
