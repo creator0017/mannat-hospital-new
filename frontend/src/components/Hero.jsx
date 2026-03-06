@@ -34,7 +34,7 @@ const Hero = ({ onBookClick }) => {
                         Pioneering <span className="text-accent">Endoscopic</span> Spine Surgery
                     </h1>
                     <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow">
-                        Restoring movement and enhancing lives with precision surgical care since 1993. Experience world-class clinical expertise tailored for your recovery.
+                        Restoring movement and enhancing lives with precision surgical care since 2014. Experience world-class clinical expertise tailored for your recovery.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <button

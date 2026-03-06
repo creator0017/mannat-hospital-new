@@ -76,12 +76,12 @@ const videos = [
 ];
 
 const localVideos = [
-    { src: '/videos/video-1.mp4', title: 'Patient Recovery Journey', desc: 'Watch a patient share their recovery experience at Mannat Hospital.', category: 'Hospital Videos' },
-    { src: '/videos/video-2.mp4', title: 'Hospital Tour & Facilities', desc: "A walkthrough of Mannat Hospital's modern facilities and infrastructure.", category: 'Hospital Videos' },
-    { src: '/videos/video-3.mp4', title: 'Orthopedic Surgery Success', desc: 'Successful orthopedic surgery and patient testimonial at Mannat Hospital.', category: 'Hospital Videos' },
-    { src: '/videos/video-4.mp4', title: 'Spine Surgery Recovery', desc: 'Patient shares their spine surgery experience and recovery process.', category: 'Hospital Videos' },
-    { src: '/videos/video-5.mp4', title: 'Joint Replacement Testimonial', desc: 'Patient testimonial after successful joint replacement surgery.', category: 'Hospital Videos' },
-    { src: '/videos/video-6.mp4', title: 'Emergency & Trauma Care', desc: "A look at Mannat Hospital's emergency and trauma care services.", category: 'Hospital Videos' },
+    {
+        src: '/hospital-video.mp4',
+        title: 'A Glimpse Inside Mannat Hospital',
+        desc: 'Take a walkthrough of our modern facilities, medical infrastructure, and state-of-the-art operation theaters.',
+        category: 'Hospital Videos'
+    }
 ];
 
 const categories = ['All', 'Hospital Videos', 'Patient Story', 'Educational', 'Medical Info', 'Health Tips'];
