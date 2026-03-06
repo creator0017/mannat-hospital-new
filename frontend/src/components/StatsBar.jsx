@@ -3,7 +3,7 @@ import CountUp from './CountUp';
 
 const StatsBar = () => {
     return (
-        <div className="bg-[#1e3a8a] text-white py-10 px-6 md:px-12 rounded-3xl shadow-2xl mb-24 max-w-[95%] xl:max-w-7xl mx-auto -mt-10 relative z-20">
+        <div className="bg-[#1e3a8a] text-white py-10 px-6 md:px-12 rounded-3xl shadow-2xl mt-12 md:mt-16 mb-24 mx-auto max-w-[95%] xl:max-w-7xl relative z-20">
             <div className="flex flex-col xl:flex-row items-center justify-between gap-12 text-center xl:text-left">
 
                 {/* Stats Section */}
