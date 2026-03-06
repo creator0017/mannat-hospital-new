@@ -1,11 +1,11 @@
 import React from 'react';
 
 const specialties = [
-    { icon: 'skeleton', title: 'Spine Surgery', description: 'Pioneering minimal invasive and endoscopic techniques for faster recovery and less pain.' },
-    { icon: 'orthopedics', title: 'Orthopedics', description: 'Comprehensive care for bone, joint, and muscle health, from trauma to total replacements.' },
-    { icon: 'medical_services', title: 'General Surgery', description: 'Expert surgical interventions across a wide range of conditions using modern technology.' },
-    { icon: 'stethoscope', title: 'Internal Medicine', description: 'Holistic health management focused on prevention, diagnosis, and non-surgical treatment.' },
-    { icon: 'emergency', title: '24/7 Emergency', description: 'Round-the-clock critical care support with immediate response for any medical emergency.' }
+    { image: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=800&auto=format&fit=crop', title: 'Spine Surgery', description: 'Pioneering minimal invasive and endoscopic techniques for faster recovery and less pain.' },
+    { image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800&auto=format&fit=crop', title: 'Orthopedics', description: 'Comprehensive care for bone, joint, and muscle health, from trauma to total replacements.' },
+    { image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop', title: 'General Surgery', description: 'Expert surgical interventions across a wide range of conditions using modern technology.' },
+    { image: 'https://images.unsplash.com/photo-1584982751601-97dcc099659c?q=80&w=800&auto=format&fit=crop', title: 'Internal Medicine', description: 'Holistic health management focused on prevention, diagnosis, and non-surgical treatment.' },
+    { image: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=800&auto=format&fit=crop', title: '24/7 Emergency', description: 'Round-the-clock critical care support with immediate response for any medical emergency.' }
 ];
 
 const Specialties = () => {
@@ -20,12 +20,22 @@ const Specialties = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {specialties.map((item, index) => (
-                        <div key={index} className="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 hover:shadow-xl transition-all group">
-                            <div className="size-14 bg-slate-50 dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                                <span className="material-symbols-outlined text-3xl">{item.icon}</span>
+                        <div key={index} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group flex flex-col">
+                            <div className="w-full aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
+                                <img
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>
-                            <h4 className="text-xl font-bold mb-3 dark:text-white">{item.title}</h4>
-                            <p className="text-slate-500 dark:text-slate-400 leading-relaxed">{item.description}</p>
+                            <div className="p-8 flex flex-col flex-grow">
+                                <h4 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors">{item.title}</h4>
+                                <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">{item.description}</p>
+                                <button className="mt-auto w-full border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-white px-5 py-3 text-xs font-bold tracking-widest uppercase rounded-xl transition-all group-hover:bg-primary group-hover:text-white group-hover:border-primary">
+                                    Learn More
+                                </button>
+                            </div>
                         </div>
                     ))}
                 </div>
