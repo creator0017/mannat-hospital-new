@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const reviews = [
     {
@@ -123,21 +128,35 @@ const ReviewsSection = () => {
                         <p className="text-gray-500 text-lg max-w-2xl mx-auto">Real reviews from real patients in Sundernagar & Mandi district</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={30}
+                        slidesPerView={1}
+                        navigation
+                        pagination={{ clickable: true }}
+                        breakpoints={{
+                            640: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                        }}
+                        className="pb-16 px-2"
+                    >
                         {reviews.map((review, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow border-l-4 border-l-[#1d4ed8]">
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="flex text-yellow-500 text-lg tracking-wider">★★★★★</div>
-                                    <span className="text-xs font-bold text-gray-400 uppercase tracking-wider bg-gray-50 px-3 py-1 rounded-full">Google Review</span>
+                            <SwiperSlide key={i} className="h-auto">
+                                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow border-l-4 border-l-[#1d4ed8] h-full flex flex-col">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="flex text-yellow-500 text-lg tracking-wider">★★★★★</div>
+                                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider bg-gray-50 px-3 py-1 rounded-full">Google Review</span>
+                                    </div>
+                                    <p className="text-gray-700 italic mb-6 leading-relaxed relative z-10 flex-grow">"{review.text}"</p>
+                                    <div className="mt-auto">
+                                        <h4 className="font-bold text-gray-900">{review.name}</h4>
+                                        <p className="text-sm text-gray-500">{review.location} • {review.date}</p>
+                                    </div>
                                 </div>
-                                <p className="text-gray-700 italic mb-6 leading-relaxed relative z-10">"{review.text}"</p>
-                                <div className="mt-auto">
-                                    <h4 className="font-bold text-gray-900">{review.name}</h4>
-                                    <p className="text-sm text-gray-500">{review.location} • {review.date}</p>
-                                </div>
-                            </div>
+                            </SwiperSlide>
                         ))}
-                    </div>
+                    </Swiper>
                 </div>
             </div>
 
