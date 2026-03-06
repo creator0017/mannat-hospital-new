@@ -1,8 +1,7 @@
-from PIL import Image, ImageOps
-import sys
+from PIL import Image
 import os
 
-def crop_and_clean(input_path, output_path):
+def process_logo(input_path, output_path):
     print("Processing", input_path)
     # Open the image
     img = Image.open(input_path).convert("RGBA")
@@ -15,11 +14,12 @@ def crop_and_clean(input_path, output_path):
     if bbox:
         img_cropped = img.crop(bbox)
         
-        # optionally make white transparent
+        # Make near-white background transparent
         data = img_cropped.getdata()
         new_data = []
         for item in data:
-            if item[0] > 235 and item[1] > 235 and item[2] > 235:
+            # Check if pixel is white or near-white
+            if item[0] > 230 and item[1] > 230 and item[2] > 230:
                 new_data.append((255, 255, 255, 0)) # transparent
             else:
                 new_data.append(item)
@@ -32,7 +32,9 @@ def crop_and_clean(input_path, output_path):
 
 os.makedirs("frontend/public/logos", exist_ok=True)
 
-crop_and_clean("C:/Users/lucky/.gemini/antigravity/brain/6bbb9f0c-68b5-414b-abfa-c5771c3c67d9/media__1772828942807.jpg", "frontend/public/logos/ayushman.png")
-crop_and_clean("C:/Users/lucky/.gemini/antigravity/brain/6bbb9f0c-68b5-414b-abfa-c5771c3c67d9/media__1772828951552.jpg", "frontend/public/logos/himcare.png")
-crop_and_clean("C:/Users/lucky/.gemini/antigravity/brain/6bbb9f0c-68b5-414b-abfa-c5771c3c67d9/media__1772828962680.png", "frontend/public/logos/echs.png")
-crop_and_clean("C:/Users/lucky/.gemini/antigravity/brain/6bbb9f0c-68b5-414b-abfa-c5771c3c67d9/media__1772828974005.png", "frontend/public/logos/nabh.png")
+base_path = "C:/Users/lucky/.gemini/antigravity/brain/6bbb9f0c-68b5-414b-abfa-c5771c3c67d9/"
+process_logo(base_path + "media__1772831225620.png", "frontend/public/logos/hp_govt.png")
+process_logo(base_path + "media__1772831235078.png", "frontend/public/logos/ayushman.png")
+process_logo(base_path + "media__1772831245758.png", "frontend/public/logos/himcare.png")
+process_logo(base_path + "media__1772831260535.png", "frontend/public/logos/echs.png")
+process_logo(base_path + "media__1772831272175.png", "frontend/public/logos/nabh.png")
