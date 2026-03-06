@@ -58,6 +58,33 @@ const specialists = [
             { label: 'Patients Treated', value: '10K+' },
         ],
     },
+    {
+        name: 'Dr. Sunny Gupta',
+        degree: 'MBBS, MD (Anesthesia), EDIAC',
+        role: 'Consultant Anesthesiologist & Pain Management',
+        fellowship: 'Senior Residency: AIIMS New Delhi',
+        experience: 'Highly Experienced',
+        image: '/doctors/dr-sunny-gupta.jpg',
+        summary: 'Highly qualified Anesthesiologist and Critical Care specialist. Diplomat in European Anesthesia and Critical Care (EDIAC) with extensive experience in pain management.',
+        bio: [
+            'Dr. Sunny Gupta is a highly skilled Consultant Anesthesiologist and Pain Management expert.',
+            'He completed his MBBS from GMC Jammu and his MD in Anesthesia and Critical Care.',
+            'He holds the prestigious Diplomat in European Anesthesia and Critical Care (EDIAC).',
+            'He has previously served as a Senior Resident at AIIMS New Delhi and as a Consultant at Fortis Hospital Kangra.',
+        ],
+        expertise: [
+            'Anesthesia & Critical Care',
+            'Pain Management',
+            'Perioperative Care',
+            'Advanced Life Support',
+            'Regional Anesthesia',
+        ],
+        stats: [
+            { label: 'Ex-Consultant', value: 'Fortis' },
+            { label: 'Sr. Residency', value: 'AIIMS' },
+            { label: 'Specialty', value: 'Pain Care' },
+        ],
+    },
 ];
 
 /* ─── Modal Component ─── */
