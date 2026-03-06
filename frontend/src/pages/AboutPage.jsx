@@ -21,7 +21,7 @@ const AboutPage = ({ onBookClick }) => {
                     </div>
                 </section>
 
-                {/* Since 2014 Section */}
+                {/* Since 2011 Section */}
                 <section className="py-24 bg-white dark:bg-background-dark overflow-hidden animate-fade-in">
                     <div className="max-w-7xl mx-auto px-6 lg:px-10">
                         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -37,14 +37,14 @@ const AboutPage = ({ onBookClick }) => {
                                 {/* Year Badge */}
                                 <div className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl">
                                     <div className="text-3xl font-black">Since</div>
-                                    <div className="text-4xl font-black text-accent">2014</div>
+                                    <div className="text-4xl font-black text-accent">2011</div>
                                 </div>
                             </div>
 
                             {/* Content */}
                             <div>
                                 <h2 className="text-primary dark:text-accent font-bold tracking-widest uppercase text-sm mb-4">Our Heritage</h2>
-                                <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-8">Since 2014</h3>
+                                <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-8">Since 2011</h3>
 
                                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
                                     Mannat Hospital is a super speciality hospital situated in the heart of Sundernagar Himachal Pradesh.
