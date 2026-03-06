@@ -37,18 +37,6 @@ const StatsBar = () => {
                     </div>
                 </div>
 
-                {/* Accreditations Section */}
-                <div className="xl:border-l xl:border-blue-800/50 xl:pl-12 w-full xl:w-auto flex flex-col items-center xl:items-start">
-                    <p className="text-blue-200 font-bold uppercase tracking-widest text-sm mb-5 text-center w-full">Accreditations & Insurance Schemes</p>
-                    <div className="flex flex-wrap items-center justify-center gap-3 bg-white/5 p-3 rounded-2xl border border-white/10 w-fit mx-auto xl:mx-0">
-                        <img src="/logos/ayushman.png" alt="Ayushman Bharat" className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md hover:scale-110 transition-transform" />
-                        <img src="/logos/himcare.png" alt="HIMCARE" className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md hover:scale-110 transition-transform" />
-                        <img src="/logos/echs.png" alt="ECHS" className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md hover:scale-110 transition-transform" />
-                        <img src="/logos/nabh.png" alt="NABH" className="h-12 w-auto object-contain bg-white rounded-lg p-1 shadow-md hover:scale-110 transition-transform" />
-                        <span className="bg-white text-blue-900 border-2 border-slate-100 text-xs font-black px-4 py-3 rounded-lg shadow-md hover:scale-110 transition-transform uppercase tracking-wider">HP Govt</span>
-                    </div>
-                </div>
-
             </div>
         </div>
     );
