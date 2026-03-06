@@ -82,7 +82,7 @@ const specialists = [
         stats: [
             { label: 'Ex-Consultant', value: 'Fortis' },
             { label: 'Sr. Residency', value: 'AIIMS' },
-            { label: 'Specialty', value: 'Pain Care' },
+            { label: 'PainSpecialty', value: 'Pain Care' },
         ],
     },
 ];
