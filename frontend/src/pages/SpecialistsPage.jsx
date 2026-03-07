@@ -91,7 +91,7 @@ const specialists = [
         role: 'Consultant Physiotherapist',
         fellowship: 'Specialist in Musculoskeletal Physiotherapy & Rehabilitation',
         experience: 'Highly Experienced',
-        image: '/doctors/dr-shubham-sharma.jpg',
+        image: '/doctors/dr-shubham-sharma-2.png',
         summary: 'Consultant Physiotherapist with expertise in musculoskeletal pain, sports injuries, and rehabilitation therapies. Advanced training in Myofascial Release (MFR) and Fascial Distortion Model (FDM).',
         bio: [
             'Dr. Shubham Sharma is a qualified Consultant Physiotherapist with a Bachelor of Physiotherapy (BPT) from Desh Bhagat University, Punjab.',
@@ -261,9 +261,9 @@ const SpecialistsPage = ({ onBookClick }) => {
                         {/* Doctor Cards Grid */}
                         <div style={{
                             display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-                            gap: '24px',
-                            maxWidth: '600px',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                            gap: '32px',
+                            maxWidth: '1200px',
                         }}>
                             {specialists.map((doc, i) => (
                                 <div
