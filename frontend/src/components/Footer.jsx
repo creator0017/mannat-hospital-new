@@ -12,7 +12,7 @@ const Footer = () => {
                             <Logo className="h-12" />
                         </div>
                         <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                            Leading the way in minimal invasive surgery and comprehensive clinical care. Your health is our legacy.
+                            Leading the way in minimal invasive spine surgery and comprehensive clinical care. Your health is our legacy.
                         </p>
                         <div className="flex flex-wrap gap-3">
                             <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://www.instagram.com/mannat_hospital_/" target="_blank" rel="noopener noreferrer" title="Instagram">
