@@ -18,31 +18,11 @@ const StickyBottomBar = ({ onBookClick }) => {
                 {/* 1. CALL NOW Button */}
                 <a
                     href={`tel:${cleanPhone}`}
-                    className="flex-1 flex flex-col items-center justify-center h-full text-white bg-[#1d4ed8] hover:bg-blue-800 transition-colors border-r border-blue-900/20"
+                    className="flex-1 flex flex-col items-center justify-center h-full text-white bg-[#1d4ed8] hover:bg-blue-800 transition-colors"
                 >
-                    <span className="material-symbols-outlined text-[20px] mb-0.5">call</span>
-                    <span className="text-[10px] font-bold tracking-wider">CALL NOW</span>
+                    <span className="material-symbols-outlined text-[24px] mb-1">call</span>
+                    <span className="text-[12px] font-bold tracking-wider">CALL NOW</span>
                 </a>
-
-                {/* 2. WHATSAPP Button */}
-                <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 flex flex-col items-center justify-center h-full text-white bg-[#25D366] hover:bg-green-600 transition-colors border-r border-green-800/20"
-                >
-                    <span className="material-symbols-outlined text-[20px] mb-0.5">chat</span>
-                    <span className="text-[10px] font-bold tracking-wider">WHATSAPP</span>
-                </a>
-
-                {/* 3. BOOK APPOINTMENT Button */}
-                <button
-                    onClick={onBookClick}
-                    className="flex-1 flex flex-col items-center justify-center h-full text-white bg-accent hover:bg-accent/90 transition-colors"
-                >
-                    <span className="material-symbols-outlined text-[20px] mb-0.5">calendar_month</span>
-                    <span className="text-[10px] font-bold tracking-wider">BOOK NOW</span>
-                </button>
             </div>
         </div>
     );
