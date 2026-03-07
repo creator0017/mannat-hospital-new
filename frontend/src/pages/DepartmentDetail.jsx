@@ -91,8 +91,8 @@ const DepartmentDetail = ({ onBookClick }) => {
                 <section className="py-20 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white">
                     <div className="max-w-4xl mx-auto px-6 lg:px-10">
                         <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden border border-slate-100 dark:border-slate-700 p-8 md:p-10 flex flex-col md:flex-row items-center gap-10">
-                            <div className="w-32 h-32 md:w-48 md:h-48 bg-slate-200 dark:bg-slate-700 rounded-full flex-shrink-0 flex items-center justify-center shadow-inner overflow-hidden border-4 border-slate-50 dark:border-slate-800 text-6xl">
-                                {department.icon}
+                            <div className="w-32 h-32 md:w-48 md:h-48 bg-slate-100 dark:bg-slate-700 rounded-full flex-shrink-0 flex items-center justify-center shadow-inner overflow-hidden border-4 border-slate-50 dark:border-slate-800 text-[#1d4ed8]">
+                                <span className="material-symbols-outlined text-[60px] md:text-[80px]">{department.icon}</span>
                             </div>
                             <div className="text-center md:text-left">
                                 <h3 className="text-3xl font-bold mb-2">{department.doctor}</h3>

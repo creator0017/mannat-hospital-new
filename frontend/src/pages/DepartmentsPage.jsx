@@ -29,8 +29,8 @@ const DepartmentsPage = ({ onBookClick }) => {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {departments.map((dept, index) => (
                                 <div key={index} className="bg-white dark:bg-slate-800 rounded-3xl p-8 border border-slate-100 dark:border-slate-700 shadow-lg hover:shadow-2xl transition-all duration-300 group flex flex-col h-full">
-                                    <div className="size-16 bg-[#1d4ed8]/10 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
-                                        {dept.icon}
+                                    <div className="size-16 bg-[#1d4ed8]/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                        <span className="material-symbols-outlined text-4xl text-[#1d4ed8]">{dept.icon}</span>
                                     </div>
                                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-[#1d4ed8] transition-colors">{dept.shortName}</h3>
                                     <p className="text-slate-500 dark:text-slate-400 mb-6 leading-relaxed flex-grow">{dept.tagline}</p>
