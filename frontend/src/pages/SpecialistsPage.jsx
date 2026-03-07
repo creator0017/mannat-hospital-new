@@ -85,6 +85,33 @@ const specialists = [
             { label: ' ', value: 'Pain Specialist' },
         ],
     },
+    {
+        name: 'Dr. Shubham Sharma (PT)',
+        degree: 'Bachelor of Physiotherapy (BPT)',
+        role: 'Consultant Physiotherapist',
+        fellowship: 'Specialist in Musculoskeletal Physiotherapy & Rehabilitation',
+        experience: 'Highly Experienced',
+        image: '/doctors/dr-shubham-sharma.jpg',
+        summary: 'Consultant Physiotherapist with expertise in musculoskeletal pain, sports injuries, and rehabilitation therapies. Advanced training in Myofascial Release (MFR) and Fascial Distortion Model (FDM).',
+        bio: [
+            'Dr. Shubham Sharma is a qualified Consultant Physiotherapist with a Bachelor of Physiotherapy (BPT) from Desh Bhagat University, Punjab.',
+            'He specializes in the diagnosis and treatment of musculoskeletal pain, sports injuries, and rehabilitation therapies.',
+            'He has received advanced training in Myofascial Release (MFR) and Fascial Distortion Model (FDM), which are modern physiotherapy techniques used for treating back pain, neck pain, joint stiffness, muscle tightness, and mobility issues.',
+            'Dr. Shubham focuses on providing personalized physiotherapy treatment plans to help patients recover faster, reduce pain, and improve mobility. His treatment approach combines manual therapy, rehabilitation exercises, and advanced physiotherapy techniques to achieve long-term recovery.',
+        ],
+        expertise: [
+            'Musculoskeletal Physiotherapy',
+            'Myofascial Release Therapy (MFR)',
+            'Fascial Distortion Model (FDM)',
+            'Pain Management & Rehabilitation',
+            'Sports Injury Physiotherapy',
+        ],
+        stats: [
+            { label: 'Adv. Training', value: 'MFR' },
+            { label: 'Adv. Training', value: 'FDM' },
+            { label: ' ', value: 'Physiotherapy' },
+        ],
+    },
 ];
 
 /* ─── Modal Component ─── */
