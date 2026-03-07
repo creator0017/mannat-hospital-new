@@ -17,10 +17,6 @@ const Specialties = () => {
                         <h2 className="text-primary dark:text-accent font-bold tracking-widest uppercase text-sm mb-4">World-Class Care</h2>
                         <h3 className="text-4xl font-bold text-slate-900 dark:text-white">Our Specialized Departments</h3>
                     </div>
-                    <a className="text-primary font-bold flex items-center gap-2 group" href="#">
-                        View all specialties
-                        <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">east</span>
-                    </a>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {specialties.map((item, index) => (

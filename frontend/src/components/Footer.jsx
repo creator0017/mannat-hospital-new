@@ -43,17 +43,16 @@ const Footer = () => {
                     <div>
                         <h4 className="font-bold text-slate-900 dark:text-white mb-6">Specialties</h4>
                         <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
-                            <li><Link className="hover:text-primary transition-colors" to="/services">Orthopedic & Spine Surgery</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" to="/services">Joint Replacement</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" to="/services">Trauma Surgery</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" to="/services">Rehabilitations & Physiotherapy</Link></li>
+                            <li><span>Orthopedic & Spine Surgery</span></li>
+                            <li><span>Joint Replacement</span></li>
+                            <li><span>Trauma Surgery</span></li>
+                            <li><span>Rehabilitations & Physiotherapy</span></li>
                         </ul>
                     </div>
                     <div>
                         <h4 className="font-bold text-slate-900 dark:text-white mb-6">Quick Links</h4>
                         <ul className="space-y-3 text-sm text-slate-500 dark:text-slate-400">
                             <li><Link className="hover:text-primary transition-colors" to="/about">About Us</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" to="/services">Our Services</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/specialists">Our Doctors</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/gallery">Gallery</Link></li>
                             <li><Link className="hover:text-primary transition-colors" to="/patient-stories">Patient Stories</Link></li>
