@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-let hasAppeared = false;
-
 const PopupLeadForm = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -12,6 +10,10 @@ const PopupLeadForm = () => {
     });
 
     useEffect(() => {
+        // Check if already shown this session
+        const hasShown = sessionStorage.getItem('leadPopupShown');
+        if (hasShown) return;
+
         // 1. Timer Logic (10 seconds delay)
         const timer = setTimeout(() => {
             showPopup();
@@ -33,9 +35,10 @@ const PopupLeadForm = () => {
     }, []);
 
     const showPopup = () => {
-        if (!hasAppeared) {
+        const hasShown = sessionStorage.getItem('leadPopupShown');
+        if (!hasShown) {
             setIsOpen(true);
-            hasAppeared = true;
+            sessionStorage.setItem('leadPopupShown', 'true');
         }
     };
 
