@@ -21,7 +21,7 @@ const Footer = () => {
                             <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="https://maps.app.goo.gl/dqNpGKnq8gxivvLn8" target="_blank" rel="noopener noreferrer" title="Google Maps">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                             </a>
-                            <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="mailto:mannathospital20@gmail.com" target="_blank" rel="noopener noreferrer" title="Email Us">
+                            <a className="size-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="mailto:mannathospital20@gmail.com" title="Email Us">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             </a>
                         </div>
@@ -76,7 +76,7 @@ const Footer = () => {
                         <p className="text-sm text-slate-500 dark:text-slate-400">
                             Near Petrol Pump, Salah, Sunder Nagar,<br />
                             Distt. Mandi, HP — 175018<br />
-                            <a href="mailto:mannathospital20@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">mannathospital20@gmail.com</a><br />
+                            <a href="mailto:mannathospital20@gmail.com" className="hover:text-primary transition-colors">mannathospital20@gmail.com</a><br />
                             <a href="tel:7590878764" className="hover:text-primary transition-colors">7590878764</a>
                             <span className="mx-1 text-slate-300">|</span>
                             <a href="tel:01907266405" className="hover:text-primary transition-colors">01907-266405</a>
