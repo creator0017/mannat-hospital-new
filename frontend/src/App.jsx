@@ -12,6 +12,7 @@ import PatientStoriesPage from './pages/PatientStoriesPage';
 import AppointmentForm from './components/AppointmentForm';
 import WhatsAppButton from './components/WhatsAppButton';
 import PhoneCallButton from './components/PhoneCallButton';
+import PopupLeadForm from './components/PopupLeadForm';
 
 
 // Scroll to top on every route change
@@ -45,6 +46,7 @@ function App() {
         <AppointmentForm isOpen={isFormOpen} onClose={toggleForm} />
         <WhatsAppButton />
         <PhoneCallButton />
+        <PopupLeadForm />
       </div>
     </Router>
   );
