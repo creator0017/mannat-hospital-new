@@ -157,6 +157,67 @@ const AboutPage = ({ onBookClick }) => {
                         </div>
                     </div>
                 </section>
+
+                {/* Video Testimonials */}
+                <section className="py-24 bg-background-light dark:bg-background-dark/50 animate-fade-in border-t border-slate-100 dark:border-slate-800">
+                    <div className="max-w-7xl mx-auto px-6 lg:px-10">
+                        <div className="text-center mb-16">
+                            <h2 className="text-primary dark:text-accent font-bold tracking-widest uppercase text-sm mb-4">Video Testimonials</h2>
+                            <h3 className="text-4xl font-bold text-slate-900 dark:text-white">What Our Patients Say About Us</h3>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    reelId: 'DVMFwcikgd4',
+                                    title: 'Life-Changing Endoscopic Spine Surgery',
+                                    desc: 'Painless and stitch-less endoscopic spine surgery performed by Dr. Basit.',
+                                    url: 'https://www.instagram.com/reel/DVMFwcikgd4/'
+                                },
+                                {
+                                    reelId: 'DR_d2rCD8sO',
+                                    title: 'Minimal Invasive Spine Surgery Success',
+                                    desc: 'Success story of minimal invasive spine surgery for chronic low back ache.',
+                                    url: 'https://www.instagram.com/reel/DR_d2rCD8sO/'
+                                },
+                                {
+                                    reelId: 'DRHukQuiQMW',
+                                    title: 'Total Knee Replacement Recovery',
+                                    desc: 'Total knee replacement for osteoarthritis under the Ayushman Bharat health scheme.',
+                                    url: 'https://www.instagram.com/reel/DRHukQuiQMW/'
+                                }
+                            ].map((video, i) => (
+                                <div key={i} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                                    <div className="w-full aspect-[9/16] max-h-[500px] bg-black">
+                                        <iframe
+                                            src={`https://www.instagram.com/reel/${video.reelId}/embed/`}
+                                            title={video.title}
+                                            className="w-full h-full"
+                                            frameBorder="0"
+                                            scrolling="no"
+                                            allowTransparency="true"
+                                            allowFullScreen
+                                            loading="lazy"
+                                        ></iframe>
+                                    </div>
+                                    <div className="p-6">
+                                        <div className="flex text-yellow-500 text-lg tracking-wider mb-2">★★★★★</div>
+                                        <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-2">{video.title}</h4>
+                                        <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">{video.desc}</p>
+                                        <a
+                                            href={video.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex items-center gap-1 text-primary font-bold text-sm hover:underline mt-auto"
+                                        >
+                                            Watch Full Story
+                                            <span className="material-symbols-outlined text-base">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>
