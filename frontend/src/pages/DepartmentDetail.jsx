@@ -166,16 +166,16 @@ const DepartmentDetail = ({ onBookClick }) => {
                                 <div className="flex text-yellow-500 text-xl">
                                     ★ ★ ★ ★ ★
                                 </div>
-                                <span className="font-bold text-lg">4.7</span>
-                                <span className="text-slate-500 dark:text-slate-400">· 200+ Reviews on Google</span>
+                                <span className="font-bold text-lg">4.5</span>
+                                <span className="text-slate-500 dark:text-slate-400">· 193 Patient Reviews on Google</span>
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
-                                { name: "Ramesh K.", review: "Very good doctors and caring staff." },
-                                { name: "Anita S.", review: "Best hospital in Sundernagar." },
-                                { name: "Suresh M.", review: "Clean facility and quick treatment." },
+                                { name: "Savita Thakur", review: "I underwent successfully spine operation by Dr. M A Basit... Outstanding hospital for spine care!" },
+                                { name: "Amzad Rishu", review: "My father's pain was completely relieved. I highly recommend him for stitch-less endoscopic spine surgery." },
+                                { name: "Cristiano", review: "The doctors here are highly skilled, the hospital is neat and clean... Dr M.A Basit is the Best Orthopedic surgeon!" },
                             ].map((rev, i) => (
                                 <div key={i} className="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700">
                                     <div className="flex text-yellow-500 text-lg mb-4">★★★★★</div>

@@ -3,40 +3,40 @@ import CountUp from './CountUp';
 
 const reviews = [
     {
-        name: "Ramesh Kumar",
-        location: "Sundernagar",
-        date: "2 months ago",
-        text: "Very good doctors and caring staff. My mother had her knee surgery here and recovered very fast. Highly recommended for anyone in Sundernagar."
+        name: "Savita Thakur",
+        location: "Patient",
+        date: "1 week ago",
+        text: "I recently visited mannat hospital for general spine check up... I underwent successfully spine operation by Dr. M A Basit. Due to his hard work and by grace of God I am completely healthy today. Outstanding hospital for spine care!"
     },
     {
-        name: "Anita Sharma",
-        location: "Mandi",
-        date: "3 months ago",
-        text: "Best hospital in Sundernagar. Clean rooms, polite staff and the doctors are very experienced. Got excellent treatment for my wife."
-    },
-    {
-        name: "Suresh Mehta",
-        location: "Sunder Nagar",
+        name: "Amzad Rishu",
+        location: "Patient",
         date: "1 month ago",
-        text: "Emergency service is very fast. They attended my father within minutes of arrival. 24x7 staff is always ready. Thank you Mannat!"
+        text: "My father was suffering from severe back pain... We consulted Dr. M. A. Basit, and it turned out to be the best decision. He performed the surgery, and my father's pain was completely relieved. I highly recommend him for stitch-less endoscopic spine surgery."
     },
     {
-        name: "Priya Thakur",
-        location: "Sundernagar",
-        date: "3 weeks ago",
-        text: "Consulted for my child's fever and the pediatrician was very thorough and kind. The medicines worked in 2 days."
+        name: "SARVESH GROVER",
+        location: "Patient",
+        date: "4 months ago",
+        text: "I had been struggling with a persistent back problem... Thanks to their effective treatment and continued support, I've seen a significant improvement in my condition. I would highly recommend Dr. MA Basit and their team at Mannat hospital, Sundernagar."
     },
     {
-        name: "Vijay Singh",
-        location: "Mandi",
+        name: "Cristiano",
+        location: "Patient",
         date: "5 months ago",
-        text: "Had surgery here and everything went smoothly. The operation theatre is modern and the post-op care was excellent. Very satisfied."
+        text: "The doctors here are highly skilled, the hospital is neat and clean, and the doctors are caring and take time to explain patients in detail... Highly recommend this hospital for orthopedic care. Dr M.A Basit is the Best Orthopedic and Endoscopic spine surgeon!"
     },
     {
-        name: "Meena Devi",
-        location: "Sundernagar",
-        date: "6 weeks ago",
-        text: "Good hospital with all facilities. Doctors explain everything clearly before treatment. Affordable charges compared to city hospitals."
+        name: "Neha Khan",
+        location: "Patient",
+        date: "5 months ago",
+        text: "I recently visited Mannat Hospital for orthopedic treatment and surgery, and my overall experience was excellent. Dr. M. Basit is highly professional, knowledgeable, and caring. The nursing staff was attentive and polite."
+    },
+    {
+        name: "Ishika Chaudhary",
+        location: "Patient",
+        date: "4 months ago",
+        text: "I had a very positive impact, feeling safe and supported, and having my health issues resolved efficiently by kind, professional staff. Dr. M.A Basit is highly professional and knowledgeable. The nursing staff is very caring. 🌟🌟🌟🌟🌟🌟"
     }
 ];
 
@@ -101,11 +101,11 @@ const ReviewsSection = () => {
                             ★★★★★
                         </div>
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">4.7 out of 5 stars</h2>
-                    <p className="text-gray-600 text-lg mb-8">Based on 200+ Patient Reviews on Google</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">4.5 out of 5 stars</h2>
+                    <p className="text-gray-600 text-lg mb-8">Based on 193 Patient Reviews on Google</p>
 
                     <a
-                        href="https://maps.google.com"
+                        href="https://maps.app.goo.gl/jaMNnyxF2vHhQDRP7"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 bg-white border border-gray-200 shadow-sm hover:shadow-md text-[#1d4ed8] font-bold px-8 py-4 rounded-xl transition-all"
