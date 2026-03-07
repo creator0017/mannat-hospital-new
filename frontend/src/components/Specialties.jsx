@@ -7,11 +7,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const specialties = [
+    { image: 'https://images.unsplash.com/photo-1581093196277-9f60898934c2?q=80&w=800&auto=format&fit=crop', title: 'Orthopaedics', description: 'Comprehensive care for bone, joint, and muscle health, from trauma to total replacements.' },
     { image: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=800&auto=format&fit=crop', title: 'Spine Surgery', description: 'Pioneering minimal invasive and endoscopic techniques for faster recovery and less pain.' },
-    { image: 'https://images.unsplash.com/photo-1581093196277-9f60898934c2?q=80&w=800&auto=format&fit=crop', title: 'Orthopedics', description: 'Comprehensive care for bone, joint, and muscle health, from trauma to total replacements.' },
-    { image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop', title: 'General Surgery', description: 'Expert surgical interventions across a wide range of conditions using modern technology.' },
+    { image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop', title: 'Joint Replacement', description: 'Advanced surgical solutions for knee, hip, and shoulder joint replacements.' },
+    { image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop', title: 'Trauma Care', description: 'Immediate and expert treatment for complex fractures and accidental injuries.' },
+    { image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?q=80&w=800&auto=format&fit=crop', title: 'Physiotherapy & Rehabilitation', description: 'Customized physical therapy programs to restore movement and relieve pain.' },
     { image: 'https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?q=80&w=800&auto=format&fit=crop', title: 'Internal Medicine', description: 'Holistic health management focused on prevention, diagnosis, and non-surgical treatment.' },
-    { image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ce21c?q=80&w=800&auto=format&fit=crop', title: '24/7 Emergency', description: 'Round-the-clock critical care support with immediate response for any medical emergency.' }
+    { image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=800&auto=format&fit=crop', title: 'Pulmonary / Chest Medicine', description: 'Expert care for respiratory diseases, asthma, COPD, and chronic breathing problems.' }
 ];
 
 const Specialties = () => {
@@ -52,7 +54,7 @@ const Specialties = () => {
                                     <h4 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-primary transition-colors">{item.title}</h4>
                                     <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">{item.description}</p>
 
-                                    {index === 0 ? (
+                                    {item.title === 'Spine Surgery' ? (
                                         <Link to="/departments/spine-surgery-sundernagar" className="mt-auto w-full border border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary text-slate-700 dark:text-white px-5 py-3 text-xs font-bold tracking-widest uppercase rounded-xl transition-all group-hover:bg-primary group-hover:text-white group-hover:border-primary text-center">
                                             Learn More
                                         </Link>
