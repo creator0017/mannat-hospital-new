@@ -171,15 +171,11 @@ const AboutPage = ({ onBookClick }) => {
                             <h3 className="text-4xl font-bold text-slate-900 dark:text-white">What Our Patients Say About Us</h3>
                         </div>
                         <Swiper
-                            modules={[Navigation, Pagination, Autoplay]}
+                            modules={[Navigation, Pagination]}
                             spaceBetween={30}
                             slidesPerView={1}
                             navigation
                             pagination={{ clickable: true }}
-                            autoplay={{
-                                delay: 3500,
-                                disableOnInteraction: false,
-                            }}
                             breakpoints={{
                                 640: { slidesPerView: 1 },
                                 768: { slidesPerView: 2 },
