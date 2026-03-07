@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import DepartmentsPage from './pages/DepartmentsPage';
+import DepartmentDetail from './pages/DepartmentDetail';
 import FacilitiesPage from './pages/FacilitiesPage';
 import ServicesPage from './pages/ServicesPage';
 import SpecialistsPage from './pages/SpecialistsPage';
@@ -36,6 +38,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage onBookClick={toggleForm} />} />
           <Route path="/about" element={<AboutPage onBookClick={toggleForm} />} />
+          <Route path="/departments" element={<DepartmentsPage onBookClick={toggleForm} />} />
+          <Route path="/departments/:slug" element={<DepartmentDetail onBookClick={toggleForm} />} />
           <Route path="/facilities" element={<FacilitiesPage onBookClick={toggleForm} />} />
           <Route path="/services" element={<ServicesPage onBookClick={toggleForm} />} />
           <Route path="/specialists" element={<SpecialistsPage onBookClick={toggleForm} />} />
