@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+let hasAppeared = false;
+
 const PopupLeadForm = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
@@ -10,14 +12,10 @@ const PopupLeadForm = () => {
     });
 
     useEffect(() => {
-        // Check if already shown this session (TEMPORARILY DISABLED FOR TESTING)
-        // const hasShown = sessionStorage.getItem('leadPopupShown');
-        // if (hasShown) return;
-
-        // 1. Timer Logic (3 seconds delay for testing)
+        // 1. Timer Logic (10 seconds delay)
         const timer = setTimeout(() => {
             showPopup();
-        }, 3000);
+        }, 10000);
 
         // 2. Exit Intent Logic for desktop (mouse moves to top of browser)
         const handleMouseLeave = (e) => {
@@ -35,16 +33,14 @@ const PopupLeadForm = () => {
     }, []);
 
     const showPopup = () => {
-        // const hasShown = sessionStorage.getItem('leadPopupShown');
-        // if (!hasShown) {
-        setIsOpen(true);
-        // sessionStorage.setItem('leadPopupShown', 'true');
-        // }
+        if (!hasAppeared) {
+            setIsOpen(true);
+            hasAppeared = true;
+        }
     };
 
     const handleClose = () => {
         setIsOpen(false);
-        sessionStorage.setItem('leadPopupShown', 'true');
     };
 
     const handleOverlayClick = (e) => {
