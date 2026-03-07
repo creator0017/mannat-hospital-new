@@ -11,7 +11,7 @@ import ContactPage from './pages/ContactPage';
 import PatientStoriesPage from './pages/PatientStoriesPage';
 import AppointmentForm from './components/AppointmentForm';
 import WhatsAppButton from './components/WhatsAppButton';
-import StickyBottomBar from './components/StickyBottomBar';
+import PhoneCallButton from './components/PhoneCallButton';
 
 
 // Scroll to top on every route change
@@ -31,7 +31,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased pb-16 md:pb-0">
+      <div className="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
         <Routes>
           <Route path="/" element={<HomePage onBookClick={toggleForm} />} />
           <Route path="/about" element={<AboutPage onBookClick={toggleForm} />} />
@@ -44,7 +44,7 @@ function App() {
         </Routes>
         <AppointmentForm isOpen={isFormOpen} onClose={toggleForm} />
         <WhatsAppButton />
-        <StickyBottomBar onBookClick={toggleForm} />
+        <PhoneCallButton />
       </div>
     </Router>
   );
