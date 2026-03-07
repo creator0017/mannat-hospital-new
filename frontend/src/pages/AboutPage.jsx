@@ -2,6 +2,11 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import CountUp from '../components/CountUp';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const AboutPage = ({ onBookClick }) => {
     return (
@@ -165,7 +170,23 @@ const AboutPage = ({ onBookClick }) => {
                             <h2 className="text-primary dark:text-accent font-bold tracking-widest uppercase text-sm mb-4">Video Testimonials</h2>
                             <h3 className="text-4xl font-bold text-slate-900 dark:text-white">What Our Patients Say About Us</h3>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <Swiper
+                            modules={[Navigation, Pagination, Autoplay]}
+                            spaceBetween={30}
+                            slidesPerView={1}
+                            navigation
+                            pagination={{ clickable: true }}
+                            autoplay={{
+                                delay: 3500,
+                                disableOnInteraction: false,
+                            }}
+                            breakpoints={{
+                                640: { slidesPerView: 1 },
+                                768: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                            }}
+                            className="pb-16"
+                        >
                             {[
                                 {
                                     reelId: 'DVMFwcikgd4',
@@ -184,38 +205,52 @@ const AboutPage = ({ onBookClick }) => {
                                     title: 'Total Knee Replacement Recovery',
                                     desc: 'Total knee replacement for osteoarthritis under the Ayushman Bharat health scheme.',
                                     url: 'https://www.instagram.com/reel/DRHukQuiQMW/'
+                                },
+                                {
+                                    reelId: 'DTDAdJ_CVl4',
+                                    title: 'Joint Pains in Winter',
+                                    desc: 'Managing joint pains during the winter season expert advice.',
+                                    url: 'https://www.instagram.com/reel/DTDAdJ_CVl4/'
+                                },
+                                {
+                                    reelId: 'DUM3k2yiYqh',
+                                    title: 'Rheumatoid Arthritis Management',
+                                    desc: 'Rheumatoid Arthritis precautions and management by Dr. M.A. Basit.',
+                                    url: 'https://www.instagram.com/reel/DUM3k2yiYqh/'
                                 }
                             ].map((video, i) => (
-                                <div key={i} className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                                    <div className="w-full aspect-[9/16] max-h-[500px] bg-black">
-                                        <iframe
-                                            src={`https://www.instagram.com/reel/${video.reelId}/embed/`}
-                                            title={video.title}
-                                            className="w-full h-full"
-                                            frameBorder="0"
-                                            scrolling="no"
-                                            allowTransparency="true"
-                                            allowFullScreen
-                                            loading="lazy"
-                                        ></iframe>
+                                <SwiperSlide key={i} className="h-auto">
+                                    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 overflow-hidden shadow-lg hover:shadow-xl transition-all h-full flex flex-col mx-2">
+                                        <div className="w-full aspect-[9/16] max-h-[500px] bg-black">
+                                            <iframe
+                                                src={`https://www.instagram.com/reel/${video.reelId}/embed/`}
+                                                title={video.title}
+                                                className="w-full h-full"
+                                                frameBorder="0"
+                                                scrolling="no"
+                                                allowTransparency="true"
+                                                allowFullScreen
+                                                loading="lazy"
+                                            ></iframe>
+                                        </div>
+                                        <div className="p-6 flex-grow flex flex-col">
+                                            <div className="flex text-yellow-500 text-lg tracking-wider mb-2">★★★★★</div>
+                                            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-2">{video.title}</h4>
+                                            <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3 flex-grow">{video.desc}</p>
+                                            <a
+                                                href={video.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-1 text-primary font-bold text-sm hover:underline mt-auto"
+                                            >
+                                                Watch Full Story
+                                                <span className="material-symbols-outlined text-base">arrow_forward</span>
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div className="p-6">
-                                        <div className="flex text-yellow-500 text-lg tracking-wider mb-2">★★★★★</div>
-                                        <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2 line-clamp-2">{video.title}</h4>
-                                        <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4 line-clamp-3">{video.desc}</p>
-                                        <a
-                                            href={video.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1 text-primary font-bold text-sm hover:underline mt-auto"
-                                        >
-                                            Watch Full Story
-                                            <span className="material-symbols-outlined text-base">arrow_forward</span>
-                                        </a>
-                                    </div>
-                                </div>
+                                </SwiperSlide>
                             ))}
-                        </div>
+                        </Swiper>
                     </div>
                 </section>
             </main>
