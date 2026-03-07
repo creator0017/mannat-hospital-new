@@ -1,92 +1,88 @@
 export const departments = [
     {
-        slug: "orthopedic-doctor-sundernagar",
-        name: "Orthopedic Doctor in Sundernagar",
+        slug: "spine-surgery-sundernagar",
+        name: "Endoscopic Spine Surgery in Sundernagar",
+        shortName: "Spine Surgery",
+        icon: "🩻",
+        tagline: "Pioneering minimal invasive and endoscopic techniques for faster recovery.",
+        doctor: "Dr. M.A. Basit",
+        qualification: "MBBS, MS Orthopedics (Specialist in Spine)",
+        experience: "15+ Years Experience",
+        treatments: [
+            "Stitchless Endoscopic Spine Surgery",
+            "Transforaminal Endoscopic Spine Surgery",
+            "Interlaminar Endoscopic Recess Decompression",
+            "Endoscopic Fusion Surgery",
+            "Deformity Correction Surgery for Spine",
+            "Minimal Invasive Spine Surgery"
+        ],
+        faqs: [
+            {
+                q: "What is Endoscopic Spine Surgery?",
+                a: "It is a highly advanced, minimally invasive spine surgery performed without large incisions or stitches, ensuring faster recovery and less pain."
+            },
+            {
+                q: "How long is the recovery time?",
+                a: "Since the procedure is stitchless and minimally invasive, most patients can walk the same day and return to normal activities much faster than traditional surgery."
+            }
+        ]
+    },
+    {
+        slug: "orthopedics-joint-replacement-sundernagar",
+        name: "Orthopedics & Joint Replacement in Sundernagar",
         shortName: "Orthopedics",
         icon: "🦴",
-        tagline: "Best Bone & Joint Care in Sundernagar",
-        doctor: "Dr. [Name]",
+        tagline: "Comprehensive care for bone, joint, and muscle health.",
+        doctor: "Dr. M.A. Basit",
         qualification: "MBBS, MS Orthopedics",
-        experience: "X Years Experience",
+        experience: "15+ Years Experience",
         treatments: [
-            "Fracture Treatment",
-            "Joint Replacement",
-            "Spine Surgery",
-            "Sports Injury",
-            "Arthritis Treatment",
-            "Knee & Hip Pain"
+            "Knee Replacement Surgery",
+            "Hip Replacement Surgery",
+            "Elbow Replacement Surgery",
+            "Shoulder Arthroplasty",
+            "Knee & Shoulder Arthroscopy",
+            "Rehabilitations & Physiotherapy"
         ],
         faqs: [
             {
-                q: "What is the best orthopedic hospital in Sundernagar?",
-                a: "Mannat Hospital is the top orthopedic center in Sundernagar with experienced surgeons and modern facilities."
+                q: "When is a joint replacement needed?",
+                a: "Joint replacement is typically recommended when severe arthritis or an injury causes uncontrollable pain and restricts mobility."
             },
             {
-                q: "Do you treat sports injuries?",
-                a: "Yes, we provide complete sports injury treatment including physiotherapy and surgical options."
-            },
-            {
-                q: "Is emergency orthopedic care available?",
-                a: "Yes, 24x7 emergency orthopedic care is available at Mannat Hospital."
+                q: "Do you offer post-surgery physiotherapy?",
+                a: "Yes, we have a dedicated rehabilitation and physiotherapy team to ensure complete recovery and restored mobility."
             }
         ]
     },
     {
-        slug: "gynecologist-sundernagar",
-        name: "Gynecologist in Sundernagar",
-        shortName: "Gynecology & Obstetrics",
-        icon: "🤰",
-        tagline: "Complete Women's Health & Maternity Care",
-        doctor: "Dr. [Name]",
-        qualification: "MBBS, MS OBGYN",
-        experience: "X Years Experience",
+        slug: "trauma-care-sundernagar",
+        name: "Complex Trauma Care in Sundernagar",
+        shortName: "Trauma Care",
+        icon: "🚑",
+        tagline: "Expert surgical care for fractures and complex trauma injuries.",
+        doctor: "Expert Surgeon Team",
+        qualification: "MS Orthopedics / Trauma Specialists",
+        experience: "Highly Experienced",
         treatments: [
-            "Normal & C-Section Delivery",
-            "High Risk Pregnancy",
-            "Infertility Treatment",
-            "PCOS Treatment",
-            "Laparoscopic Surgery",
-            "Women's Health Checkup"
-        ],
-        faqs: [
-            {
-                q: "Best gynecologist in Sundernagar?",
-                a: "Mannat Hospital has experienced gynecologists handling normal deliveries, C-sections and high-risk pregnancies."
-            },
-            {
-                q: "Do you have maternity facilities?",
-                a: "Yes, we have a fully equipped maternity ward with 24x7 nursing staff."
-            }
-        ]
-    },
-    {
-        slug: "child-specialist-sundernagar",
-        name: "Child Specialist in Sundernagar",
-        shortName: "Pediatrics",
-        icon: "👶",
-        tagline: "Expert Child & Newborn Care",
-        doctor: "Dr. [Name]",
-        qualification: "MBBS, MD Pediatrics",
-        experience: "X Years Experience",
-        treatments: [
-            "Newborn Care",
-            "Vaccination",
-            "Child Growth Monitoring",
-            "Fever & Infection Treatment",
-            "Nutritional Counseling",
-            "Adolescent Health"
+            "Complex Trauma Surgery",
+            "Long Bone Fixation",
+            "Corrective Surgeries",
+            "Tendon Transfer",
+            "Upper & Lower Limb Fracture Fixation",
+            "Road Traffic Accident Care"
         ],
         faqs: []
     },
     {
-        slug: "general-surgeon-sundernagar",
-        name: "General Surgeon in Sundernagar",
+        slug: "general-surgery-sundernagar",
+        name: "General Surgery in Sundernagar",
         shortName: "General Surgery",
         icon: "🏥",
-        tagline: "Advanced Surgical Care in Sundernagar",
-        doctor: "Dr. [Name]",
+        tagline: "Expert surgical interventions using modern technology.",
+        doctor: "Consultant Surgeon",
         qualification: "MBBS, MS General Surgery",
-        experience: "X Years Experience",
+        experience: "10+ Years Experience",
         treatments: [
             "Appendix Surgery",
             "Hernia Surgery",
@@ -98,14 +94,14 @@ export const departments = [
         faqs: []
     },
     {
-        slug: "general-physician-sundernagar",
-        name: "General Physician in Sundernagar",
-        shortName: "General Medicine",
+        slug: "internal-medicine-sundernagar",
+        name: "Internal Medicine in Sundernagar",
+        shortName: "Internal Medicine",
         icon: "🩺",
-        tagline: "Trusted Doctor for All General Illnesses",
-        doctor: "Dr. [Name]",
+        tagline: "Holistic health management focused on prevention and diagnosis.",
+        doctor: "General Physician",
         qualification: "MBBS, MD Medicine",
-        experience: "X Years Experience",
+        experience: "10+ Years Experience",
         treatments: [
             "Fever & Flu Treatment",
             "Diabetes Management",
@@ -119,9 +115,9 @@ export const departments = [
     {
         slug: "emergency-care-sundernagar",
         name: "24x7 Emergency Care in Sundernagar",
-        shortName: "Emergency",
+        shortName: "24/7 Emergency",
         icon: "🚨",
-        tagline: "Immediate Emergency Treatment Available 24x7",
+        tagline: "Round-the-clock critical care support with immediate response.",
         doctor: "Emergency Response Team",
         qualification: "Critical Care Certified",
         experience: "24x7 On-Call",
@@ -133,6 +129,11 @@ export const departments = [
             "Burn Treatment",
             "Critical Care ICU"
         ],
-        faqs: []
+        faqs: [
+            {
+                q: "What emergency services are available 24/7?",
+                a: "We provide trauma response, heart attack care, stroke care, poisoning treatment, and critical care ICU services round-the-clock."
+            }
+        ]
     }
 ];
