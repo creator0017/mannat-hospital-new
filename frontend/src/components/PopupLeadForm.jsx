@@ -10,15 +10,14 @@ const PopupLeadForm = () => {
     });
 
     useEffect(() => {
-        // Check if already shown this session
-        const hasShown = sessionStorage.getItem('leadPopupShown');
-        // Do not return early, the component should just wait
-        if (hasShown) return;
+        // Check if already shown this session (TEMPORARILY DISABLED FOR TESTING)
+        // const hasShown = sessionStorage.getItem('leadPopupShown');
+        // if (hasShown) return;
 
-        // 1. Timer Logic (10 seconds delay)
+        // 1. Timer Logic (3 seconds delay for testing)
         const timer = setTimeout(() => {
             showPopup();
-        }, 10000);
+        }, 3000);
 
         // 2. Exit Intent Logic for desktop (mouse moves to top of browser)
         const handleMouseLeave = (e) => {
@@ -36,11 +35,11 @@ const PopupLeadForm = () => {
     }, []);
 
     const showPopup = () => {
-        const hasShown = sessionStorage.getItem('leadPopupShown');
-        if (!hasShown) {
-            setIsOpen(true);
-            sessionStorage.setItem('leadPopupShown', 'true');
-        }
+        // const hasShown = sessionStorage.getItem('leadPopupShown');
+        // if (!hasShown) {
+        setIsOpen(true);
+        // sessionStorage.setItem('leadPopupShown', 'true');
+        // }
     };
 
     const handleClose = () => {
@@ -80,10 +79,11 @@ const PopupLeadForm = () => {
         >
             <div className="bg-white w-full h-full md:h-auto md:max-w-[400px] md:rounded-2xl shadow-2xl overflow-hidden flex flex-col md:block animate-slide-up relative">
 
+                {/* Close Button has absolute positioning. Reordered into DOM here */}
                 {/* Close Button */}
                 <button
                     onClick={handleClose}
-                    className="absolute top-4 right-4 z-10 text-white hover:text-gray-200 bg-black/20 hover:bg-black/40 rounded-full w-8 h-8 flex items-center justify-center transition-colors"
+                    className="absolute top-4 right-4 z-50 text-white md:text-gray-500 hover:text-gray-200 bg-black/20 hover:bg-black/40 rounded-full w-8 h-8 flex items-center justify-center transition-colors"
                     aria-label="Close"
                 >
                     <span className="material-symbols-outlined text-[20px]">close</span>
@@ -177,7 +177,7 @@ const PopupLeadForm = () => {
                     animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
                 }
             `}</style>
-        </div>
+        </div >
     );
 };
 
