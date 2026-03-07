@@ -135,33 +135,7 @@ const AboutPage = ({ onBookClick }) => {
                     </div>
                 </section>
 
-                {/* Core Values */}
-                <section className="py-24 bg-white dark:bg-background-dark animate-fade-in">
-                    <div className="max-w-7xl mx-auto px-6 lg:px-10">
-                        <div className="text-center mb-16">
-                            <h2 className="text-primary dark:text-accent font-bold tracking-widest uppercase text-sm mb-4">What We Stand For</h2>
-                            <h3 className="text-4xl font-bold text-slate-900 dark:text-white">Our Core Values</h3>
-                        </div>
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {[
-                                { icon: 'favorite', title: 'Compassion', desc: 'We treat every patient with empathy, dignity, and personalized attention.' },
-                                { icon: 'workspace_premium', title: 'Excellence', desc: 'We strive for the highest standards in clinical care and surgical outcomes.' },
-                                { icon: 'handshake', title: 'Integrity', desc: 'We maintain transparency and honesty in all our interactions and treatments.' },
-                                { icon: 'groups', title: 'Teamwork', desc: 'Our multidisciplinary team collaborates to deliver the best possible care.' },
-                                { icon: 'psychology', title: 'Innovation', desc: 'We embrace the latest medical technologies and techniques for better outcomes.' },
-                                { icon: 'volunteer_activism', title: 'Community', desc: 'We are committed to serving and uplifting the health of our local community.' },
-                            ].map((item, i) => (
-                                <div key={i} className="bg-background-light dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 text-center hover:shadow-xl transition-all group">
-                                    <div className="size-14 mx-auto bg-white dark:bg-slate-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                                        <span className="material-symbols-outlined text-3xl">{item.icon}</span>
-                                    </div>
-                                    <h4 className="text-xl font-bold mb-3 dark:text-white">{item.title}</h4>
-                                    <p className="text-slate-500 dark:text-slate-400 leading-relaxed">{item.desc}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+
 
                 {/* Video Testimonials */}
                 <section className="py-24 bg-background-light dark:bg-background-dark/50 animate-fade-in border-t border-slate-100 dark:border-slate-800">
