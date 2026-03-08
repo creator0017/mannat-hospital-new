@@ -9,11 +9,10 @@ import 'swiper/css/pagination';
 const specialties = [
     { image: 'https://images.unsplash.com/photo-1581093196277-9f60898934c2?q=80&w=800&auto=format&fit=crop', title: 'Orthopaedics', description: 'Comprehensive care for bone, joint, and muscle health, from trauma to total replacements.' },
     { image: 'https://images.unsplash.com/photo-1584432810601-6c7f27d2362b?q=80&w=800&auto=format&fit=crop', title: 'Spine Surgery', description: 'Pioneering minimal invasive and endoscopic techniques for faster recovery and less pain.' },
-    { image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop', title: 'Joint Replacement', description: 'Advanced surgical solutions for knee, hip, and shoulder joint replacements.' },
-    { image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop', title: 'Trauma Care', description: 'Immediate and expert treatment for complex fractures and accidental injuries.' },
     { image: 'https://images.unsplash.com/photo-1576671081837-49000212a370?q=80&w=800&auto=format&fit=crop', title: 'Physiotherapy & Rehabilitation', description: 'Customized physical therapy programs to restore movement and relieve pain.' },
+    { image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=800&auto=format&fit=crop', title: 'Pain Management', description: 'Advanced pain relief for chronic back pain, joint pain, and nerve damage.' },
     { image: 'https://images.unsplash.com/photo-1576091160550-2173ff9e5ee5?q=80&w=800&auto=format&fit=crop', title: 'Internal Medicine', description: 'Holistic health management focused on prevention, diagnosis, and non-surgical treatment.' },
-    { image: 'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=800&auto=format&fit=crop', title: 'Pulmonary / Chest Medicine', description: 'Expert care for respiratory diseases, asthma, COPD, and chronic breathing problems.' }
+    { image: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ce21c?q=80&w=800&auto=format&fit=crop', title: 'Emergency & Trauma Care', description: 'Immediate and expert treatment for complex fractures, accidental injuries, and critical emergencies.' }
 ];
 
 const Specialties = () => {
