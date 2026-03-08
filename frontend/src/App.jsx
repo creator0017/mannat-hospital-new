@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import FacilitiesPage from './pages/FacilitiesPage';
 import SpecialistsPage from './pages/SpecialistsPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
@@ -49,7 +48,6 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage onBookClick={toggleForm} />} />
           <Route path="/about" element={<AboutPage onBookClick={toggleForm} />} />
-          <Route path="/facilities" element={<FacilitiesPage onBookClick={toggleForm} />} />
           <Route path="/specialists" element={<SpecialistsPage onBookClick={toggleForm} />} />
           <Route path="/gallery" element={<GalleryPage onBookClick={toggleForm} />} />
           <Route path="/contact" element={<ContactPage onBookClick={toggleForm} />} />

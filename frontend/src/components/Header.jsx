@@ -5,7 +5,6 @@ import Logo from './Logo';
 const navItems = [
     { name: 'Home', path: '/', icon: 'home' },
     { name: 'Our Doctors', path: '/specialists', icon: 'person' },
-    { name: 'Facilities', path: '/facilities', icon: 'apartment' },
     { name: 'Gallery', path: '/gallery', icon: 'photo_library' },
     { name: 'Contact Us', path: '/contact', icon: 'call' },
     { name: 'About Us', path: '/about', icon: 'info' },
